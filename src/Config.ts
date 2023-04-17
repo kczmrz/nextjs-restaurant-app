@@ -1,3 +1,5 @@
+/*Gh Pages edition */
+
 /* You can complete the data! */
 const contact = {PhoneNumber: 123456789, Email: "Email@email.com"}
 const Info = {link1: '#', link2:'#', link3: '#'};
