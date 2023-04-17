@@ -40,7 +40,7 @@ export default function Work()
          <div className='container' id="index_one">
            <div className='content'>
              <div className='Information'>
-               <div className='Information__container one'> <Image src={imgs.indexImage} alt="Cooking for you!"/> </div>
+               <div className='Information__container one'> <Image src={imgs.indexImage} alt="Cooking for you!" placeholder="blur" priority/> </div>
                <div className='Information__container two'> 
                  Join to our team!
                 <div className='two__description'>

@@ -42,7 +42,7 @@ export default function Home() {
         <div className='container' id="index_one">
           <div className='content'>
             <div className='Information'>
-              <div className='Information__container one'> <Image src={imgs.burger2} alt="Cooking for you!"/> </div>
+              <div className='Information__container one'> <Image src={imgs.burger2} alt="Cooking for you!" /> </div>
               <div className='Information__container two'> 
                 Cooking for you is our passion! 
                <div className='two__description'>

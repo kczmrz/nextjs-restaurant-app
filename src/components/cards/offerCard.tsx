@@ -6,7 +6,8 @@ import { CartItem, AddToCart, CheckCart, UpdatePrice } from "@/redux/features/ca
 import { useDispatch } from "react-redux";
 import { v4 as uuid } from 'uuid';
 import { toast } from 'react-toastify';
-
+import { customLoader } from "@/images/Extras";
+import ImageLoader from "../loading/imageLoading";
 
 interface offerCard {
    data: IProducts;
@@ -55,7 +56,7 @@ const OfferCard = (props:offerCard) =>
     <div>
        <div className="productCard">
           <div className="productCard__image">
-            <Image className="productCard__image__img" src={MenuImages[props.data.img].img} alt={props.data.title}/> 
+            <Image className="productCard__image__img"  src={MenuImages[props.data.img].img} alt={props.data.title} placeholder="blur" onError={() => <ImageLoader />} priority/> 
           </div>
 
           <div>
