@@ -18,7 +18,7 @@ export default function Footer(){
         <div className="footer__hr"/>
         <div className="footer">
            <div className="footer__elements">
-              <div className="element"> <a href='https://github.com/kczmrz' target="_blank" ><FontAwesomeIcon icon={faGithub as IconProp} />  Kczmrz</a> </div>
+              <div className="element"> <a href='https://github.com/kczmrz' target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub as IconProp} />  Kczmrz</a> </div>
             <ul>
                 <b>Information</b>
                 <li><Link href={Info.link1 as string}>Info 1</Link></li>
