@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil, faMobileScreen } from "@fortawesome/free-solid-svg-icons";
 import { toast } from 'react-toastify';
 
+
 interface ClientInfo {
     ID: any;
     NameAndSurName: string;
@@ -45,42 +46,11 @@ export default function Post () {
     const OrderFromCart = useSelector((state: RootState)=> state.Cart.items)
     
     /*Alert */
-    const notify = () => toast.success("The order has been placed");
+    const notify = () => toast.success("The order hasn't been placed. This is GH-Pages demo");
 
     const handleSubmit = async (event: any) => {
-       
-        
-        event.preventDefault();
-
-        const Client:ClientInfo = {
-            ID: ID,
-            NameAndSurName: event.target.PersonInfo.value,
-            PhoneNumber: event.target.PhoneNmbr.value,
-            EMail: event.target.email.value,
-            City: event.target.city.value,
-            Street: event.target.street.value,
-            HomeNumber: event.target.housenmbr.value,
-            PostCode: event.target.postcode.value,
-            Price: FullCost,
-            Order: OrderFromCart
-        }
-        const JSONdata = JSON.stringify(Client);
-        const endpoint = '/api/order';
-
-        const options = {
-            method: 'POST',
-           
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            
-            body: JSONdata,
-          }
-        const response = await fetch(endpoint, options);
-        setPosted(true);
-        const result = await response.json()
-        if(result != null) return notify();
-        
+       setPosted(true);
+       notify();
     }
     
     
@@ -128,6 +98,8 @@ export default function Post () {
     </div>
 </div>)
 if(posted) return (
+  <div>
+    <Head><title>Thank You</title></Head>
      <div className="container">
         <div className="content">
              <div className="Thanks">
@@ -138,8 +110,8 @@ if(posted) return (
                  </div> 
              </div>
         </div>
-
-     </div>)
+      </div>
+  </div>)
 }
 
 
