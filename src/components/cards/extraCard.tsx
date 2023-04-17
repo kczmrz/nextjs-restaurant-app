@@ -7,7 +7,6 @@ import { useDispatch } from "react-redux";
 import { v4 as uuid } from 'uuid';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ImageLoader from "../loading/imageLoading";
 
 interface extraCard {
    data: IExtras;
@@ -50,7 +49,7 @@ const ExtraCard = (props:extraCard) =>
        <div className="ExtraCard">
          <div className="ExtraCard__sections">
           <div className="ExtraCard__image">
-            <Image className="ExtraCard__image__img" src={ExtrasImages[props.data.img].img} alt={props.data.title} placeholder="blur"  onError={() => <ImageLoader />} priority/> 
+            <Image className="ExtraCard__image__img" src={ExtrasImages[props.data.img].img} alt={props.data.title} placeholder="blur" /> 
           </div>
 
           <div className="ExtraCard__Info">
