@@ -2,7 +2,7 @@ import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
 import { IProducts } from "@/mongodb/models/product";
 import { IExtras } from "@/mongodb/models/extras";
 import { URL } from "@/Config";
-import { JSONOfflineDATA } from "@/GHPagesJson";
+import { JSONOfflineDATA } from "@/withoutMongoDB";
 import axios from "axios";
 
 interface FetchingData {
