@@ -1,38 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Simple restaurant app in NEXT JS/Typescript/ReduxToolkit/Sass
 
-## Getting Started
+The application is able to:
 
-First, run the development server:
+●Retrieve the menu from the MONGODB database
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+●Post an order to the MONGODB database
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application can be expanded in various ways.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Github Pages
+    [In this place will be a link]  
+    ⚠️Github-Pages version haven't a backend
+    
+## App Schema
+![HowWorkLoadingData](https://user-images.githubusercontent.com/96081508/232546733-8387d454-704f-4a74-80dd-cfecd0eb7e36.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Install and congifure
+How to install?
+`git clone [LINK]`
+`cd [place_where_your_clone_has_been_saved]`
+`npm install`
+`npm run dev`
 
-## Learn More
+In the 'Config.ts' and '.env' files, you can configure the project (MongoDB, describes etc)
 
-To learn more about Next.js, take a look at the following resources:
+### MongoDB
+To run your application, you need a MONGODB database with three collections.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![exampleDB](https://user-images.githubusercontent.com/96081508/232546463-a6b5ffb5-7989-4d89-af93-4fda43cb949c.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+In ".env" you have a 5 variables:
+1) Key to your database
+2) Name of your database
+3) Name of your collection "Products"
+4) Name of your collection "Order"
+5) Name of your collection "Extras"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Get API links**
+`/api/products`
+`/api/extras`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+**JSON schema for "Products"**
+
+    {
+        "title":"Developer burger!",
+        "price":
+        [
+            {
+            "small":17.5,
+            "normal":25.55,
+            "big":39.5
+            }
+        ],
+        "description":"Meal for a real developer! ",
+        "img":0
+    },
+
+**JSON schema for "Extras"**
+
+     {
+    "title": "Fries",
+    "price": 5,
+    "description": "additional fries",
+    "img": 0
+    }
+    
+Why images are a number?
+
+"In **../src/Images/...**, you have folders where you can add your own images. (Don't forget to edit the index.ts file.)"
+
+## Screens
+Desktop:
+![fullScreens](https://user-images.githubusercontent.com/96081508/232546959-b3d389d1-f11f-4cb7-b7a5-89af1e1b05e1.png)
+
+Mobile:
+![fullScreenMobile](https://user-images.githubusercontent.com/96081508/232547005-136d57a9-ce29-4182-b602-f599d151516d.png)
+
+
