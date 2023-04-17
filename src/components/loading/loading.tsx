@@ -22,11 +22,18 @@ export default function Loading()
 
     }, [loadingFromRedux])
 
-    if (loading) return(
-        <div className="loading">
-            <div className="loading__loader"><Image src={imgs.burger} alt="burger" width={120} height={120}/> </div>
-        </div>
+    return(
+    <div> 
+       {loading
+       ?  <div className="loading">
+             <div className="loading__loader"><Image src={imgs.burger} alt="burger" width={120} height={120}/> </div>
+         </div>
+         
+       : <div> {null} </div>
+       }
+    </div>
     )
+    
    
 }
 
