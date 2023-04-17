@@ -49,7 +49,7 @@ const ExtraCard = (props:extraCard) =>
        <div className="ExtraCard">
          <div className="ExtraCard__sections">
           <div className="ExtraCard__image">
-            <Image className="ExtraCard__image__img" src={ExtrasImages[props.data.img].img} alt={props.data.title} placeholder="blur" /> 
+            <Image className="ExtraCard__image__img" src={ExtrasImages[props.data.img].img} alt={props.data.title} placeholder="blur"/> 
           </div>
 
           <div className="ExtraCard__Info">
