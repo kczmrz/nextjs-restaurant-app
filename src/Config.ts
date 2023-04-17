@@ -9,7 +9,7 @@ const socialmedia = {link1: "https://instagram.com/", link2: "https://facebook.c
 const PostOrderCheck = true;  /* Post your order ON/OFF */
 const GetOrderCheck = false;  /* Json loading from 'localhost:3000/api/order ON/OFF */
 
-const test = '';
+
 
 const describes = [
     /* For index page */
