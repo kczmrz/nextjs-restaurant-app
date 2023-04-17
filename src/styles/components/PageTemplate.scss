@@ -1,0 +1,35 @@
+@use '../utilities/animations.scss' as *;
+@use '../utilities/theme.scss' as *;
+
+.container {
+    min-height: 100vh;
+    height: auto;
+    padding: 20px;
+    margin: 0;
+    color: white;
+    @include iconStartAnimation(1s);
+    
+}
+
+
+.content {
+    margin-top: 1%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (max-width: 600px) {
+   .content {
+    margin-top: 5%;
+   }
+  }
+@media (max-width: $tablet-breakpoint) {
+
+    .content {
+        margin-top: 10%;
+
+    }
+}

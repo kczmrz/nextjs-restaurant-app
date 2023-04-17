@@ -1,0 +1,110 @@
+@use '../../utilities/theme.scss' as *;
+
+.ShoppingCart {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 48rem;
+    max-height: 48rem;
+    border-bottom: 4px solid $Yellow;
+    scrollbar-color: $Yellow $Dark;
+    &__heading {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}
+
+.CartCard {
+    width: 60%;
+    background-color: $Dark;
+    border-radius: 10rem;
+    padding: 2rem;
+    color: white;
+    font-size: 2rem;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid $Yellow;
+    box-shadow: 2px 2px 2px black;
+    &__box {
+        width: 50%;
+        &__price {
+            font-weight: bold;
+            color: rgb(40, 20, 20);
+        }
+    }
+    &__button {
+        border: none;
+        background-color: rgb(178, 178, 178);
+        font-size: 1.4rem;
+        padding: 1rem;
+        border-radius: 2rem;
+        &:hover {
+            background-color: rgb(72, 72, 72);
+        }
+    }
+}
+
+
+
+
+@media (max-width: $tablet-breakpoint) {
+    .ShoppingCart {
+        margin-top: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        overflow-y: scroll;
+        background-color: rgb(0, 0, 0, 0.5);
+        height: auto;
+        max-height: 30rem;
+        border-bottom: 4px solid $Yellow;
+        scrollbar-color: $Yellow $Dark;
+        &__heading {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    }
+    
+
+    .CartCard {
+        width: 80%;
+        background-color: $Dark;
+        border-radius: 10rem;
+        padding: 2rem;
+        color: white;
+        font-size: 1.4rem;
+        margin-top: 1%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        border: 3px solid $Yellow;
+        box-shadow: 2px 2px 2px black;
+        &__box {
+            width: 50%;
+            &__price {
+                font-weight: bold;
+                color: rgb(40, 20, 20);
+            }
+        }
+        &__button {
+            border: none;
+            background-color: rgb(178, 178, 178);
+            font-size: 1rem;
+            padding: 1rem;
+            border-radius: 2rem;
+            &:hover {
+                background-color: rgb(72, 72, 72);
+            }
+        }
+    }
+    
+}

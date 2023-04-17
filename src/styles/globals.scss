@@ -1,0 +1,33 @@
+@import './components/';
+
+@import './utilities/';
+body, html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  background-image: url('../images/BurgerAndFries.jpg');
+  background-size: cover;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body {
+  position: relative;
+}
+@media (max-width: 600px) {
+  body, html {
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url('../images/BurgerAndFries.jpg');
+    
+    background-color: black;
+    width: 100%;
+    
+    
+  }
+  body { 
+    position: relative;}
+ }

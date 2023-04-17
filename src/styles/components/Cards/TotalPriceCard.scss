@@ -1,0 +1,102 @@
+@use '../../utilities/theme.scss' as *;
+
+.TotalCost {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.7);
+    padding: 2rem;
+
+   &__space {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+   }
+    &__form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        
+    }
+
+    &__text {
+        font-size: 2rem;
+        &__p {
+            font-size: 2.4rem;
+            color: $Yellow;
+            text-decoration: underline;
+        }
+    }
+
+    &__btn {
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        font-size: 2rem;
+        color: $Yellow;
+        background-color: $Dark;
+        width: 40%;
+        padding: 1%;
+        border-radius: 2em;
+        &:hover {
+            background-color: rgb(54, 48, 48);
+        }
+    }
+
+}
+
+
+@media (max-width: $tablet-breakpoint) { 
+    .TotalCost {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(0, 0, 0, 0.7);
+        padding: 2rem;
+    
+       &__space {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+       }
+        &__form {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            
+        }
+    
+        &__text {
+            font-size: 2rem;
+            &__p {
+                font-size: 1.4rem;
+                color: $Yellow;
+                text-decoration: underline;
+            }
+        }
+    
+        &__btn {
+            border: none;
+            font-size: 2rem;
+            color: $Yellow;
+            background-color: $Dark;
+            width: auto;
+            padding: 1rem;
+            border-radius: 2em;
+            &:hover {
+                background-color: rgb(54, 48, 48);
+            }
+        }
+    
+    }
+    
+    
+}

@@ -1,0 +1,245 @@
+@use '../utilities/theme.scss' as *;
+.payform {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: rgb(77, 77, 77);
+    width: 30%;
+    align-self: center;
+    padding: 2rem;
+    border-radius: 3em;
+   
+    &__heading {
+     font-size: 2rem;
+     font-weight: bold;
+
+     &__back{
+        background-color: rgb(95, 36, 36);
+        color: white;
+        font-size: 1.3rem;
+        text-decoration: none;
+        padding: 1rem;
+        border-radius: 2em;
+        &:hover {
+            background-color: rgb(83, 59, 59);
+        }
+     }
+     &__section {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        
+    } 
+     &__price {
+        font-size: 1.6rem;
+     }
+   }
+    &__input {
+        border-radius: 2em;
+        font-size: 1rem;
+        height: 1.5rem;
+        border: none;
+        border-bottom: 0.2rem gray solid;
+        background-color: rgb(225, 225, 225);
+    }
+    &__delivery {
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        form {
+            display: flex;
+            flex-direction: column;
+            label {
+                margin-top: 2%;
+            }
+            
+            .CityForm {
+                margin-top: 4%;
+                display: flex;
+                flex-direction: column;
+                label {
+                    font-size: 1.2rem;
+                    input {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    &__submit {
+        margin-top: 2%;
+        font-size: 1.5rem;
+        background-color: $Yellow2;
+        color: white;
+        border: none;
+        padding: 2%;
+        border-radius: 2em;
+        &:hover {
+            background-color: $Yellow;
+        }
+    }
+
+    &__paymentInfo {
+        margin-top: 4%;
+        font-size: 0.7em;
+    }
+}
+
+.Thanks{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+  
+    &__Card {
+        width: 30%;
+        background-color: white;
+        text-align: center;
+        border-radius: 0 4em 0 4em;
+       &__header {
+        font-size: 4rem;
+        font-family: 'Pacifico', cursive;
+       }
+       &__info {
+        font-size: 2rem;
+        padding: 4%;
+        font-family: 'Pacifico', cursive;
+       }
+       &__mobile {
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+          &__elem {
+            width: 8rem;
+            height: 8rem;
+            
+            }
+       }
+   }
+}
+
+@media (max-width: $tablet-breakpoint) {  
+    .payform {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        color: rgb(77, 77, 77);
+        width: 90%;
+        align-self: center;
+        padding: 2rem;
+        border-radius: 0em;
+       
+        &__heading {
+         font-size: 2rem;
+         font-weight: bold;
+    
+         &__back{
+            background-color: rgb(95, 36, 36);
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            padding: 1rem;
+            border-radius: 2em;
+            &:hover {
+                background-color: rgb(83, 59, 59);
+            }
+         }
+         &__section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            
+        } 
+         &__price {
+            font-size: 1.6rem;
+         }
+       }
+        &__input {
+            border-radius: 2em;
+            font-size: 1rem;
+            height: 1.5rem;
+            border: none;
+            border-bottom: 0.2rem gray solid;
+            background-color: rgb(225, 225, 225);
+        }
+        &__delivery {
+            display: flex;
+            flex-direction: column;
+            font-size: 2rem;
+            form {
+                display: flex;
+                flex-direction: column;
+                label {
+                    margin-top: 2%;
+                }
+                
+                .CityForm {
+                    margin-top: 4%;
+                    display: flex;
+                    flex-direction: column;
+                    label {
+                        font-size: 1.2rem;
+                        input {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+        &__submit {
+            margin-top: 2%;
+            font-size: 1.5rem;
+            background-color: $Yellow2;
+            color: white;
+            border: none;
+            padding: 2%;
+            border-radius: 2em;
+            &:hover {
+                background-color: $Yellow;
+            }
+        }
+    
+        &__paymentInfo {
+            margin-top: 4%;
+            font-size: 0.7em;
+        }
+    }
+    
+    
+.Thanks{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+  
+    &__Card {
+        width: 80%;
+        background-color: white;
+        text-align: center;
+        border-radius: 0 4em 0 4em;
+       &__header {
+        font-size: 2rem;
+        font-family: 'Pacifico', cursive;
+       }
+       &__info {
+        font-size: 1.2rem;
+        padding: 4%;
+        font-family: 'Pacifico', cursive;
+       }
+       &__mobile {
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+          &__elem {
+            width: 3rem;
+            height: 3rem;
+            
+            }
+       }
+   }
+}
+}

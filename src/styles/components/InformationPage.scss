@@ -1,0 +1,110 @@
+@use '../utilities/theme.scss' as *;
+@use '../utilities/animations.scss' as *;
+
+.Information{ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    margin-top: 5%;
+    .one {
+       color: $Yellow;
+       background-color: rgb(31, 28, 28, 0.6);
+       width: 50%;
+    }
+    .two {
+        background-color: $Dark;
+        color: $Yellow;
+        font-size: 2.5rem;
+        padding: 2%;
+        font-family: 'Pacifico', cursive;
+        border-radius: 0 6rem 6rem 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        &__description {
+            margin-top: 8%;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.6rem;
+            color: white;
+          a{
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+            }
+            
+        }
+
+    }
+    
+    &__container {
+        width: auto;
+        img {
+            width: 50rem; 
+            height: auto;
+            &:hover {
+             -webkit-filter: drop-shadow(5px 5px 5px red);
+              filter: drop-shadow(5px 5px 5px red);
+            }
+        }
+    }
+}
+
+
+@media (max-width: $tablet-breakpoint) {   
+    .Information{ 
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 100%;
+        margin-top: 5%;
+        .one {
+           color: $Yellow;
+           background-color: rgb(31, 28, 28, 0.0);
+        }
+        .two {
+            background-color: $Dark;
+            color: $Yellow;
+            font-size: 2rem;
+            padding: 2%;
+            font-family: 'Pacifico', cursive;
+            border-radius: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            &__description {
+                margin-top: 0%;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 1.6rem;
+                text-align: left;
+
+              a{
+                text-decoration: none;
+                color: white;
+                cursor: pointer;
+                }
+                
+            }
+    
+        }
+        
+        &__container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 15rem; 
+                height: auto;
+                &:hover {
+                 -webkit-filter: drop-shadow(5px 5px 5px red);
+                  filter: drop-shadow(5px 5px 5px red);
+                }
+            }
+        }
+    }
+    
+}

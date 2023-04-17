@@ -1,0 +1,30 @@
+@mixin flash($duration)  {
+    animation-duration: $duration;
+    animation-timing-function: initial;
+    animation-fill-mode: forwards;
+    animation-name: flash;
+  @keyframes flash {
+      from {
+        opacity: 0%;
+        }
+      to {
+        opacity: 100%;
+        }
+    }
+  }
+
+  @mixin iconStartAnimation($duration) {
+    animation-duration: $duration;
+    animation-timing-function: initial;
+    animation-fill-mode: forwards;
+    animation-name: iconStart;
+
+    @keyframes iconStart {
+      from {
+       transform: translateY(300px);
+        }
+      to {
+       transform: translateY(0);
+        }
+    }
+  }

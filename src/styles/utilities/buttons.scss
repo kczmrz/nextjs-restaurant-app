@@ -1,0 +1,71 @@
+@use '../utilities/animations.scss' as *;
+@use '../utilities/theme.scss' as *;
+
+.button_1 {
+    @include iconStartAnimation(1.5s);
+    margin-top: 5%;
+    width: 60%;
+    background-color:transparent;
+    color:$Brown;
+    border: none;
+    font-size: 2rem;
+    border: 2px solid $Brown;
+    position: relative;
+    transition: all .35s;
+    span{
+        position: relative;
+        z-index: 2;
+      }
+      &:after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: $Brown;
+        transition: all .35s;
+      }
+      &:hover{
+        color: #fff;
+      }
+      &:hover:after{
+        width: 100%;
+      }
+      
+   }
+
+
+.button_2 {
+    @include iconStartAnimation(1.5s);
+    margin-top: 5%;
+    width: 100%;
+    background-color: rgb(36, 1, 1, 0.6);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    border: 2px solid white;
+    position: relative;
+    transition: all .35s;
+    span{
+        position: relative;
+        z-index: 2;
+      }
+      &:after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: white;
+        transition: all .35s;
+      }
+      &:hover{
+        color: $Brown;
+    }
+      &:hover:after{
+        width: 100%;
+      }
+      
+   }
