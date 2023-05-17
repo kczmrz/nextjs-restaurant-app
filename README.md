@@ -9,7 +9,7 @@ The application is able to:
 The application can be expanded in various ways.
 
 ## Github Pages
-    https://nextjs-fast-food-app-vercel.vercel.app/
+    https://vercel.com/kczmrz/kczmrz-fastfood-app/8kdJE77wmwsJh23dkEjxojr7UHds
     ⚠️Github-Pages version haven't a backend
     
 ## App Schema
