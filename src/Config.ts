@@ -3,7 +3,7 @@ const contact = {PhoneNumber: 123456789, Email: "Email@email.com"}
 const Info = {link1: '#', link2:'#', link3: '#'};
 const socialmedia = {link1: "https://instagram.com/", link2: "https://facebook.com/", link3: "https://twitter.com/"};
 
-const PostOrderCheck = false;  /* Post your order ON/OFF */
+const PostOrderCheck = true;  /* Post your order ON/OFF */
 const GetOrderCheck = false;  /* Json loading from 'localhost:3000/api/order ON/OFF */
 
 

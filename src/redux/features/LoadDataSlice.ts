@@ -1,8 +1,7 @@
 import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
-import { IProducts } from "@/mongodb/models/product";
+import product, { IProducts } from '../../mongodb/models/product';
 import { IExtras } from "@/mongodb/models/extras";
 import { URL } from "@/Config";
-import { JSONOfflineDATA } from "@/withoutMongoDB";
 import axios from "axios";
 
 interface FetchingData {
@@ -18,14 +17,16 @@ interface FetchedData {
 
 /* Create Async Thunk from /api/ (mongodb) */
 export const fetchData = createAsyncThunk<FetchedData, void>('products/products', async()=> {
-    const data1 = JSONOfflineDATA.products;
-    const data2 = JSONOfflineDATA.extras;
-
+    const data1 = await axios
+    .get(URL + '/api/products');
+    
+    const data2 = await axios
+    .get(URL + '/api/extras');
     return {
-        data1: data1,
-        data2: data2
+        data1: data1.data,
+        data2: data2.data
     }
-});
+})
 
 const initialState: FetchingData = {
     loading: false,
@@ -64,4 +65,3 @@ export const Data = createSlice({
 
 
 export default Data.reducer;
-

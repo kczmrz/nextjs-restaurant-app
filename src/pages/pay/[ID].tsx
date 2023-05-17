@@ -5,11 +5,9 @@ import { useSelector } from "react-redux";
 import { CartItem } from "@/redux/features/cartSlice";
 import Head from "next/head";
 import Link from "next/link";
-import { URL } from "@/Config";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPencil, faMobileScreen } from "@fortawesome/free-solid-svg-icons";
 import { toast } from 'react-toastify';
-
 
 interface ClientInfo {
     ID: any;
@@ -46,11 +44,45 @@ export default function Post () {
     const OrderFromCart = useSelector((state: RootState)=> state.Cart.items)
     
     /*Alert */
-    const notify = () => toast.success("The order hasn't been placed. This is GH-Pages demo");
+    const notify = () => toast.success("The order has been placed");
 
     const handleSubmit = async (event: any) => {
-       setPosted(true);
-       notify();
+       
+        
+      event.preventDefault();
+
+        const Client:ClientInfo = {
+            ID: ID,
+            NameAndSurName: event.target.PersonInfo.value,
+            PhoneNumber: event.target.PhoneNmbr.value,
+            EMail: event.target.email.value,
+            City: event.target.city.value,
+            Street: event.target.street.value,
+            HomeNumber: event.target.housenmbr.value,
+            PostCode: event.target.postcode.value,
+            Price: FullCost,
+            Order: OrderFromCart
+        }
+        const JSONdata = JSON.stringify(Client);
+        const endpoint = '/api/order';
+
+        const options = {
+            method: 'POST',
+           
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            
+            body: JSONdata,
+          }
+        const response = await fetch(endpoint, options);
+        const result = await response.json();
+        setPosted(true);
+
+        if(result != null) return notify();
+        
+     
+
     }
     
     
@@ -88,7 +120,7 @@ export default function Post () {
                            <input type="string" className="payform__input" id="housenmbr" name="housenmbr" required></input>
                         </div>
                         <p className="payform__paymentInfo">Payment only on delivery</p>
-                        <button type="submit" className="payform__submit">OKEY</button>
+                         <button type="submit" className="payform__submit">OKEY</button>
                      </form>
                      
                  </div>
@@ -98,8 +130,8 @@ export default function Post () {
     </div>
 </div>)
 if(posted) return (
-  <div>
-    <Head><title>Thank You</title></Head>
+  <div> 
+    <Head><title>Finalization</title></Head>
      <div className="container">
         <div className="content">
              <div className="Thanks">
@@ -110,8 +142,8 @@ if(posted) return (
                  </div> 
              </div>
         </div>
-      </div>
-  </div>)
+        </div>
+     </div>)
 }
 
 

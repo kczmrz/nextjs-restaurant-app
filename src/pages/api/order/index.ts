@@ -1,6 +1,5 @@
 import {dbConnect, disconnect, getCollection } from "@/mongodb/library/mongo";
 import { NextApiRequest, NextApiResponse } from "next";
-import { MongoClient } from 'mongodb';
 import { curentlyDatabase } from "@/mongodb/library/mongo";
 import { GetOrderCheck, PostOrderCheck } from "@/Config";
 export default async function PostOrder(req: NextApiRequest, res: NextApiResponse)
