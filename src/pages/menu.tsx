@@ -33,11 +33,13 @@ export default function Menu( { menu }: any )
 
 
     return(
-        <div>
+        <>
            <Head> <title>Order online </title></Head>
-           <Navbar/>
-           <div className="container">
-               <div className="content">
+          <nav> 
+             <Navbar/>
+           </nav>
+           <main className="container">
+               <div className="PageContent">
                 <p className="MenuParagraph">Menu</p>
                    <div className="productCards">
                     {products.map((i:any)=> (
@@ -51,9 +53,11 @@ export default function Menu( { menu }: any )
                        ))}
                    </div>
                </div>
-           </div>
-           <Footer/>
-        </div>
+           </main>
+           <footer> 
+              <Footer/>
+           </footer>
+        </>
     )
 }
 

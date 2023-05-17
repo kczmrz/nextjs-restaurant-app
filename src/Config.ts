@@ -12,7 +12,7 @@ const describes = [
     /* For index page */
     {
         describe:
-        "This app has been created using Next JS with Typescript, Sass, MongoDB, and Redux-Toolkit. It simulates a fake fast-food restaurant and includes 4 pages: index, order, work, and cart. You can add an item from the menu to the cart and remove it later. All items are loaded from MongoDB. Have fun! Author: Kczmrz"
+        "This app has been created using Next JS with Typescript, Sass, MongoDB, and Redux-Toolkit. It simulates a fake fast-food restaurant and includes 4 pages: index, order, work, and cart. You can add an item from the menu to the cart and remove it later. All items are loaded from MongoDB. Have fun! Author: Kczmrz."
     },
   /* For work page */
     {

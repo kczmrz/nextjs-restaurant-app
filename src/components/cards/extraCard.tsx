@@ -45,27 +45,20 @@ const ExtraCard = (props:extraCard) =>
      notify();
    }
     return(
-    <div>
-       <div className="ExtraCard">
-         <div className="ExtraCard__sections">
-          <div className="ExtraCard__image">
-            <Image className="ExtraCard__image__img" src={ExtrasImages[props.data.img].img} alt={props.data.title} placeholder="blur"/> 
-          </div>
-
-          <div className="ExtraCard__Info">
-            <p className="ExtraCard__title">{props.data.title}</p>
-            <div className="ExtraCard__description">  
-               {props.data.description}
-            </div>
-            <br/>
+      <div>
+      <div className="product">
+        <div className="info"> 
+          <Image src={ExtrasImages[props.data.img].img} alt="Product Image" loading="lazy"/>
+           <h2 className="product__title">{props.data.title}</h2>
+           <p className="product__description">{props.data.description}</p>
            
-            <h1>{displayPrice}&nbsp;pln </h1>
-           </div>
-          </div>
-          <button className="ExtraCard__buyBtn" onClick={AddProductToCart}>Add to cart</button>
-
+           <p className="product__price">{displayPrice}pln</p>
+         </div>
+         <div className="button">
+           <button className="product__btn" onClick={AddProductToCart}>Add to Cart</button>
+         </div>
         </div>
-     </div>
+    </div>
     )
 }
 

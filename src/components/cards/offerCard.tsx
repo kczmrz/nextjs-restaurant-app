@@ -53,27 +53,30 @@ const OfferCard = (props:offerCard) =>
    }
     return(
     <div>
-       <div className="productCard">
-          <div className="productCard__image">
-            <Image className="productCard__image__img"  src={MenuImages[props.data.img].img} alt={props.data.title} placeholder="blur"/> 
-          </div>
+       <div className="product">
+         <div className="info"> 
+           <Image src={MenuImages[props.data.img].img} alt="Product Image" loading="lazy"/>
+            <h2 className="product__title">{props.data.title}</h2>
+            <p className="product__description">{props.data.description}</p>
 
-          <div>
-            <h1>{props.data.title}</h1>
-            <div className="productCard__description">  
-               {props.data.description}
+            <div className="product__sel"> 
+              <div> 
+               <select defaultValue={1} className="product__list" onChange={(e:React.ChangeEvent<HTMLSelectElement>) => setProductSize(e.target.value)}>
+                  <option value={0}>Small</option>
+                  <option value={1}>Normal</option>
+                  <option value={2}>Big</option>
+               </select>
+              </div>  
+              <div> 
+                <div className="product__price">{displayPrice}pln</div>
+              </div>
             </div>
-            <br/>
-            <select defaultValue={1} className="productCard__list" onChange={(e:React.ChangeEvent<HTMLSelectElement>) => setProductSize(e.target.value)}>
-               <option value={0}>Small</option>
-               <option value={1}>Normal</option>
-               <option value={2}>Big</option>
-            </select>  
-            <h1>{displayPrice}&nbsp;pln </h1>
-            <button className="productCard__buyBtn" onClick={AddProductToCart}>Add to cart</button>
+            
           </div>
-        
-        </div>
+          <div className="button">
+            <button className="product__btn" onClick={AddProductToCart}>Add to Cart</button>
+          </div>
+         </div>
      </div>
     )
 }

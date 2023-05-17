@@ -18,8 +18,8 @@ function Navbar()
                     <Link href="/menu">Menu</Link>
                  </li>  
 
-                 <li className={router.pathname == "/work" ? "active" : ""}>
-                    <Link href="work">Work</Link>
+                 <li className={router.pathname == "/aboutus" ? "active" : ""}>
+                    <Link href="/aboutus">About us!</Link>
                  </li>  
             </ul>
             <div className="nav__Logo">

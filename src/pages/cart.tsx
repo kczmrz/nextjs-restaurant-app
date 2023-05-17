@@ -26,7 +26,7 @@ export default function Cart()
            <Head> <title>Join to us! </title></Head>
            <Navbar/>
            <div className="container">
-               <div className="content">
+               <div className="PageContent">
                 <div className="ShoppingCart">
                   <p className="ShoppingCart__heading">Your cart:</p>
                   {userCart.map((product, index) => 

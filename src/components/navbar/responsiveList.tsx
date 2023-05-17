@@ -44,7 +44,7 @@ export function ResponsiveList(props: Rlistprops)
                  </li>  
 
                  <li className="elem2">
-                    <Link href="/work" className="elem2">Work</Link>
+                    <Link href="/aboutus" className="elem2">About us!</Link>
                  </li>  
 
                  <li className="elem1">

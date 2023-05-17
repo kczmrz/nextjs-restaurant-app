@@ -6,7 +6,9 @@ import { RootState } from "@/redux/store/store";
 import { fetchData } from "@/redux/features/LoadDataSlice";
 import { imgs } from "@/images";
 import { Navbar,Footer } from "@/components";
-import { describes } from "@/Config";
+import { describes, contact } from "@/Config";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faAt } from "@fortawesome/free-solid-svg-icons";
 export default function Work()
 {
      /* Products have been loaded from Redux :-) */
@@ -32,27 +34,34 @@ export default function Work()
       }, []);
 
     return(
-        <div>
-        <Head>
+      <>
+      <Head>
          <title>FastFood FastWay!</title>
-       </Head>
+      </Head>
+     <nav> 
        <Navbar/> 
-         <div className='container' id="index_one">
-           <div className='content'>
-             <div className='Information'>
-               <div className='Information__container one'> <Image src={imgs.indexImage} alt="Cooking for you!" placeholder="blur" priority/> </div>
-               <div className='Information__container two'> 
-                 Join to our team!
-                <div className='two__description'>
-               {describes[1].describe}
-                 </div>
-                 
-               </div>
-               <div className='Information__container'> </div>
-             </div>
-             </div>
-          </div>
-       <Footer/>
-     </div>
+     </nav>
+     <main className="container">
+      <div className='AboutUs'>
+       <div className="AboutUs__header">About Us <hr className="line"/></div>
+        <div className="AboutUs__info">  
+          <div><Image src={imgs.cooks} alt="About us!" width={300} loading="lazy"/></div> 
+          <div className="text">{describes[0].describe}</div>
+        </div>
+         <div>
+         <div className="AboutUs__header">You need a job? <hr className="line"/></div>
+            <div className="AboutUs__contact"> 
+               <div className="OneContact"> <FontAwesomeIcon icon={faPhone}/> &nbsp;&nbsp;  {contact.PhoneNumber} </div>
+               <div className="OneContact"> <FontAwesomeIcon icon={faAt}/> &nbsp;&nbsp;  {contact.Email} </div>
+            </div>
+         </div>
+         <div className="+"> &nbsp;</div>
+       </div>
+     </main>
+     <footer> 
+         <Footer/>
+     </footer>
+     </>
+   
     )
 }

@@ -1,0 +1,73 @@
+@use '../utilities/theme.scss' as *;
+@use '../utilities/animations.scss' as *;
+
+.AboutUs {
+    background-color: rgb(0, 0, 0, 0.9);
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+
+    &__header {
+        margin-top: 8rem;
+        font-size: 3rem;
+        .line {
+            height: 4px;
+            background-color: white;
+           
+        }
+    }
+
+    &__info {
+        width: 65%;
+        display: flex;
+        flex-direction: row;
+        place-items: center;
+        border: white 2px solid;
+        color: black;
+        background-color: white;
+        border-radius: 0 2em 2em 0;
+        .text {
+            font-size: 1.5rem;
+             padding-left: 5%;
+            padding-right: 5%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+
+        .OneContact {
+            font-size: 2rem;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    .emptysphere {
+        height: 10em;
+    }
+}
+
+
+@media (max-width: $tablet-breakpoint) {
+    .AboutUs {
+        min-height: 100vh;
+        height: auto;
+        &__info {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            place-items: center;
+            border: white 2px solid;
+            color: white;
+            background-color: rgb(0, 0, 0, 0.5);
+            border-radius: 0;
+        }
+      }
+    
+  }

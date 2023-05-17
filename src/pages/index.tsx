@@ -2,16 +2,13 @@ import { Navbar, Footer } from '@/components';
 import { Inter } from '@next/font/google';
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image';
-import { imgs } from '@/images';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import { contact, describes } from '@/Config';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { describes } from '@/Config';
 import { useDispatch  }  from 'react-redux';
 import { fetchData } from '@/redux/features/LoadDataSlice';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/redux/store/store';
+import CookieConsent from "react-cookie-consent";
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -34,30 +31,36 @@ export default function Home() {
     
   }, []);
   return (
-    <div>
-       <Head>
+    <>
+     <Head>
         <title>FastFood FastWay!</title>
-      </Head>
+     </Head>
+    <nav> 
       <Navbar/> 
-        <div className='container' id="index_one">
-          <div className='content'>
-            <div className='Information'>
-              <div className='Information__container one'> <Image src={imgs.burger2} alt="Cooking for you!" /> </div>
-              <div className='Information__container two'> 
-                Cooking for you is our passion! 
-               <div className='two__description'>
-                {describes[0].describe}
-                </div>
-                <div>
-                  <FontAwesomeIcon icon={faPhone} /> {contact.PhoneNumber} <br/>
-                  or <Link href='/menu' style={{ textDecoration: 'none', color: 'white' }}>order online! </Link>
-                </div>
-              </div>
-              <div className='Information__container'> </div>
-            </div>
-            </div>
-         </div>
-      <Footer/>
-    </div>
+    </nav>
+    <main className='container'>
+     <div className='HelloPage'>
+        <p className='line typing'>Are you hungry?</p>
+        <div className='HelloPage__check'>
+            <Link href='/menu' className='link'> Yes </Link>
+            <Link href='/menu' className='link'> Sure! </Link>      
+        </div>
+       <div className='HelloPage__aboutUS'> <Link href='/aboutus' className='HelloPage__aboutUS__link'>About us!</Link></div> 
+      </div>
+     
+    </main>
+    <footer> 
+        <Footer/>
+    </footer>
+      <CookieConsent
+         location="bottom"
+         buttonText="Okay!"
+         cookieName="testCookie"
+         style={{ background: "black" }}
+         buttonStyle={{ color: "#4e503b", fontSize: "17px" }}
+         expires={150}>
+        {describes[0].describe}
+    </CookieConsent>
+    </>
   )
 }

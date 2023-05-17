@@ -2,7 +2,7 @@
 @use '../utilities/theme.scss' as *;
 .loading {
     display: flex;
-    z-index: 15;
+    z-index: 25;
     position: fixed;
     align-items: center;
     justify-content: center;
