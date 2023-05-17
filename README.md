@@ -9,7 +9,7 @@ The application is able to:
 The application can be expanded in various ways.
 
 ## Github Pages
-    [In this place will be a link]  
+    https://nextjs-fast-food-app-vercel.vercel.app/
     ⚠️Github-Pages version haven't a backend
     
 ## App Schema
@@ -75,9 +75,11 @@ Why images are a number?
 
 ## Screens
 Desktop:
-![fullScreens](https://user-images.githubusercontent.com/96081508/232546959-b3d389d1-f11f-4cb7-b7a5-89af1e1b05e1.png)
+![full](https://github.com/kczmrz/nextjs-restaurant-app/assets/96081508/22200419-ba63-4e19-be29-20dc462efbf1)
+
 
 Mobile:
-![fullScreenMobile](https://user-images.githubusercontent.com/96081508/232547005-136d57a9-ce29-4182-b602-f599d151516d.png)
+![fullmobile](https://github.com/kczmrz/nextjs-restaurant-app/assets/96081508/fcbd1149-35f9-4fb5-b61d-0bdadcf7ed77)
+
 
 
