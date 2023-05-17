@@ -3,7 +3,7 @@
 #This branch doesn't use MongoDB! (Data is loaded from JSON)"
 
 ## Github Pages
-    https://nextjs-fast-food-app-vercel.vercel.app/
+   https://vercel.com/kczmrz/kczmrz-fastfood-app/8kdJE77wmwsJh23dkEjxojr7UHds
     ⚠️Github-Pages version haven't a backend
     
 
