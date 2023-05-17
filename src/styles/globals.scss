@@ -17,6 +17,11 @@ body, html {
 body {
   position: relative;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 @media (max-width: 600px) {
   body, html {
     background-attachment: fixed;
